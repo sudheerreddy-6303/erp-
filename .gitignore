@@ -1,0 +1,35 @@
+# ── dependencies ──
+/node_modules
+/.pnp
+.pnp.js
+.yarn/
+
+# ── production build ──
+/build
+/dist
+
+# ── testing / coverage ──
+/coverage
+
+# ── environment files (NEVER commit real env files) ──
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# (the committed template is .env.example)
+
+# ── logs ──
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ── OS / editor junk ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ───────── Security headers (meta-tag form) ─────────
+         Best practice is to ALSO set these as real HTTP response
+         headers on your host (e.g. Render / a _headers file or
+         reverse proxy). Meta tags are the in-repo fallback.
+
+         CSP notes:
+           - script-src 'self'        => only our own bundled JS runs
+           - style-src 'unsafe-inline'=> required by React inline styles
+                                         + the Tabler/Google CSS links
+           - frame-ancestors 'none'   => blocks click-jacking / iframing
+           - object-src 'none'        => kills Flash/plugin vectors
+    -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+      font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com;
+      img-src 'self' data: https://img1.wsimg.com;
+      connect-src 'self';
+      frame-src 'none';
+      frame-ancestors 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    " />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+    <title>DI — ERP Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* DI Brand Colors */
+  --navy:        #0B2545;
+  --navy-dark:   #061830;
+  --navy-mid:    #1A3A6B;
+  --navy-light:  #E8EEF7;
+  --orange:      #E8621A;
+  --orange-dark: #C0501A;
+  --orange-light:#FFF0E8;
+  --white:       #FFFFFF;
+  --bg:          #F4F6FA;
+  --surface:     #FFFFFF;
+  --border:      #E2E8F0;
+  --text:        #0B2545;
+  --muted:       #64748B;
+  --light-text:  #94A3B8;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+input { font-family: inherit; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
